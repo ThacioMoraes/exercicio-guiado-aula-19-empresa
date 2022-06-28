@@ -1,8 +1,6 @@
 package com.company;
 
-import com.company.models.Empregado;
-import com.company.models.Empresa;
-import com.company.models.FabricaEmpregado;
+import com.company.models.*;
 
 public class Main {
 
@@ -10,9 +8,13 @@ public class Main {
         Empresa batata = new Empresa("123456/0001");
         FabricaEmpregado fabrica = FabricaEmpregado.getInstance();
 
-        Empregado batataJunior = fabrica.criaEmpregado("EMP-INT");
-        Empregado batataJunior2 = fabrica.criaEmpregado("EMP-INT");
-        
+        EmpregadoRelacaoDep batataJunior = (EmpregadoRelacaoDep)fabrica.criaEmpregado("EMP-INT");
+        EmpregadoContratado batataJunior2 = (EmpregadoContratado)fabrica.criaEmpregado("EMP-EXT");
+
+        batataJunior.setSalarioMensal(2000);
+        batataJunior2.setValorPorHora(20);
+        batataJunior2.setImposto(0.10);
+
         batata.addEmpregado(batataJunior);
         batata.addEmpregado(batataJunior2);
 

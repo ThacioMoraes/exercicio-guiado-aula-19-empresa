@@ -2,7 +2,7 @@ package com.company.models;
 
 public class EmpregadoRelacaoDep extends Empregado{
 
-    private double salarioMensal = 100;
+    private double salarioMensal;
 
     @Override
     public double calculaSalario(int dias){

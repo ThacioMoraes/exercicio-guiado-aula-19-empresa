@@ -9,4 +9,12 @@ public class EmpregadoContratado extends Empregado{
     public double calculaSalario(int dias){
         return (valorPorHora * 8) * dias * (1 - imposto);
     }
+
+    public void setValorPorHora(double valorPorHora) {
+        this.valorPorHora = valorPorHora;
+    }
+
+    public void setImposto(double imposto) {
+        this.imposto = imposto;
+    }
 }
